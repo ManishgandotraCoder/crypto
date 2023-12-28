@@ -3,36 +3,3 @@
     margin-right: 25%;
 
 }
-
-
-
-select {
-    width: 100vh;
-    border-radius: 5px;
-    background: #fff;
-    border: 1px solid #ccc;
-    outline: none;
-    padding: 6px;
-}
-
-select:focus {
-    border: 1px solid #56b4ef;
-    box-shadow: 0px 0px 3px 1px #c8def0;
-}
-
-select:invalid {
-    border: 1px solid #fa0303;
-    box-shadow: 0px 0px 3px 1px #c8def0;
-}
-
-button {
-    border: transparent;
-    background-color: #56b4ef;
-    border-radius: 4px;
-    width: 100vh;
-    padding: 6px;
-    margin-top: 10px;
-}
-.error {
-color: #fa0303;
-}

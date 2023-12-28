@@ -1,4 +1,4 @@
-export interface inputComponent {
+export interface inputComponentType {
     submit: boolean, 
     value:number,
     changeValues: Function, 

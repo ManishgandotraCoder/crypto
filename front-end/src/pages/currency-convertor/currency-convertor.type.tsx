@@ -1,8 +1,8 @@
 export interface currencyConvertorType {
     formvalues : {
-        amount :number,
-        currency: string,
-        crypto:string
+        Amount :number,
+        Currency: string,
+        Crypto:string
     },
     changeValues: Function,
     submit: boolean,

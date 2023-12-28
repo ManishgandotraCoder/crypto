@@ -3,9 +3,9 @@ import CurrencyconvertorComponentContainer from "./currency-convertor.container"
 
 const CurrencyconvertorComponentHelper = () => {
     const [formvalues, setFormvalues] = useState({
-        currency: '',
-        crypto: '',
-        amount: 0
+        Currency: '',
+        Crypto: '',
+        Amount: 0
     })
     const [submit, setSubmit] = useState(false)
 
