@@ -1,0 +1,38 @@
+{
+  "name": "node_in_ts_structure",
+  "version": "1.0.0",
+  "description": "Node JS in Typescript",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "nodemon",
+    "build": "rimraf ./build && tsc",
+    "test": "mocha test/**.ts",
+    "coverage": "nyc ",
+    "lint": "eslint .",
+    "html": "nyc report --reporter=html",
+    "data": "mongo-erd --uri mongodb://127.0.0.1:27017 --db NodeTs, --outfile ./erd",
+    "erd": "mongoose-erd-generator --format svg path src/models --output images"
+  },
+  "author": "Manish Gandotra",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/passport": "^1.0.16",
+    "@types/passport-jwt": "^3.0.13",
+    "body-parser": "^1.20.2",
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-bearer-token": "^2.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "node-input-validator": "^4.5.1",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "path": "^0.12.7",
+    "typescript": "^5.3.3"
+  }
+}

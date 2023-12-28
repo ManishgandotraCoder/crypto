@@ -27,3 +27,14 @@
 .error {
     color: #fa0303;
 }
+
+option {
+    background-color: rgba(10, 180, 180, 1);
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(10, 180, 180, 1);
+        background-color: white;
+        cursor: pointer;
+    }
+}

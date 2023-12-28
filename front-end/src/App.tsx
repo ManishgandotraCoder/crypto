@@ -4,7 +4,6 @@ import routes from './routes/route'
 const Loader = React.lazy(() => import("./components/loader/loader.helper"));
 
 const App: React.FunctionComponent = () => {
-    // document.body.style.backgroundColor = "#D9DDDC"
 
   return (
         <div>
