@@ -1,10 +1,11 @@
 import React from "react"
 import './currency-convertor.css'
 import { currencyConvertorType } from "./currency-convertor.type"
+import Input from "../../components/input";
 const CurrencyConvertorContainerComponent = ({ submit, handleSubmit, formvalues, changeValues }: currencyConvertorType) => {
 
     return (
-        <form className="head" onSubmit={(e) => handleSubmit(e)}>
+        <form noValidate className="head" onSubmit={(e) => handleSubmit(e)}>
             <label>
                 Crypto:
                 <select required={submit} value={formvalues.crypto} onChange={(e) => changeValues('crypto', e.target.value)}>
@@ -16,15 +17,7 @@ const CurrencyConvertorContainerComponent = ({ submit, handleSubmit, formvalues,
                 </select>
                 {submit && !crypto && <span className="error">Please select crypto</span>}
             </label>
-            {/* Amount field */}
-            <label>
-                Amount:
-                <input type="number" required={submit} value={formvalues.amount} onChange={(e) => changeValues('amount', e.target.value)} />
-                {submit && !formvalues.amount && <span className="error">Please select valid Amount</span>}
-
-            </label>
-            {/* currency field */}
-
+            <Input value={formvalues.amount} title={'Amount'} submit={submit} type={'number'} changeValues={changeValues} />
             <label>
                 Currency:
                 <select required={submit} value={formvalues.currency} onChange={(e) => changeValues('currency', e.target.value)}>
