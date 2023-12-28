@@ -1,10 +1,11 @@
-// import React from "react";
-// import TopbarContainerComponent from './topbar.container';
+import React from "react";
+import './topbar.css'
+function TopbarHelperComponent() {
+    return (
+        <div className="topnav">
+           Crypto Convertor
+        </div>
+    );
+}
 
-// function TopbarHelperComponent() {
-//     return (
-//         <TopbarContainerComponent/>
-//     );
-// }
-
-// export default TopbarHelperComponent;
+export default TopbarHelperComponent;

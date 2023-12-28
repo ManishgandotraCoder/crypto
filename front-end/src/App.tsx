@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import routes from './routes/route'
 const Loader = React.lazy(() => import("./components/loader/loader.helper"));
-// const Topbar = React.lazy(() => import("./components/topbar/topbar.helper"));
+const Topbar = React.lazy(() => import("./components/topbar/topbar.helper"));
 
 const App: React.FunctionComponent = () => {
     // document.body.style.backgroundColor = "#D9DDDC"
@@ -17,7 +17,7 @@ const App: React.FunctionComponent = () => {
                             key={item.path}
                             element={
                                 <React.Suspense fallback={<Loader />}>
-                                    {/* <Topbar /> */}
+                                    <Topbar />
                                     {item.element}
                                 </React.Suspense>
                             }
