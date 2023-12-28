@@ -3,7 +3,7 @@ import { selectComponentType } from "./select.type"
 import './select.css'
 const Select = ({ submit, value, changeValues, title }: selectComponentType) => {
     return (<label>
-        {title}
+        {title}<br/>
         <select required={submit} value={value} onChange={(e) => changeValues(title, e.target.value)}>
             <option value={''}>Select currency</option>
             <option value={'usd'}>USD</option>
@@ -11,6 +11,7 @@ const Select = ({ submit, value, changeValues, title }: selectComponentType) => 
 
         </select>
         {submit && !value && <span className="error">Please select currency</span>}
+        <br/>
     </label>)
 }
 export default Select
