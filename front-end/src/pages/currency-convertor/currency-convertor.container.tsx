@@ -7,12 +7,27 @@ import Button from "../../components/button/button";
 const CurrencyConvertorContainerComponent = ({ submit, handleSubmit, formvalues, changeValues }: currencyConvertorType) => {
 
     return (
-        <form noValidate className="head" onSubmit={(e) => handleSubmit(e)}>
-            <Select value={formvalues.Crypto} title={'Crypto'} submit={submit} changeValues={changeValues} />
-            <Input value={formvalues.Amount} title={'Amount'} submit={submit} type={'number'} changeValues={changeValues} />
-            <Select value={formvalues.Currency} title={'Currency'} submit={submit} changeValues={changeValues} />
-            <Button handleSubmit={handleSubmit} />
-        </form>
+        <div className="signupSection">
+
+            <form noValidate onSubmit={(e) => handleSubmit(e)} className="signupForm" name="signupform">
+                <h2>Crypto Conversion</h2>
+                <ul className="noBullet">
+                    <li>
+                        <Select value={formvalues.Crypto} title={'Crypto'} submit={submit} changeValues={changeValues} />
+                    </li>
+                    <li>
+                        <Input value={formvalues.Amount} title={'Amount'} submit={submit} type={'number'} changeValues={changeValues} />
+                    </li>
+                    <li>
+                        <Select value={formvalues.Currency} title={'Currency'} submit={submit} changeValues={changeValues} />
+                    </li>
+                    <li id="center-btn">
+                        <Button handleSubmit={handleSubmit} />
+                        {/* <input type="submit" id="join-btn" name="join" alt="Join" value="Join" /> */}
+                    </li>
+                </ul>
+            </form>
+        </div>
     );
 }
 

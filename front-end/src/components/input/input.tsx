@@ -2,11 +2,11 @@ import React from "react"
 import './input.css'
 import { inputComponentType } from "./input.type"
 const Input = ({ submit, value, changeValues, title, type }: inputComponentType) => {
-    return (<label>
-        {title}:<br/>
-        <input type={type} required={submit} value={value} onChange={(e) => changeValues(title, e.target.value)} />
-        {submit && !value && <span className="error">Please select valid Amount</span>}<br/>
-    </label>
+    return (<>
+        <label ></label>
+        <input type={type} className="inputFields" placeholder={title} required={submit} value={value} onChange={(e) => changeValues(title, e.target.value)} /><br/>
+        { submit && !value && <span className="error">Please select valid {title}</span> }
+    </>
 
     )
 }
