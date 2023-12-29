@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client"
 import App from "./src/App"
 import { HashRouter } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import {Provider} from 'react-redux'
+import store from './src/redux/store';
 
 const Loader = React.lazy(() => import("./src/components/loader/loader.helper"));
 
@@ -15,9 +16,9 @@ root.render(
   <React.StrictMode>
     <Suspense fallback={<Loader />}>
       <HashRouter>
-        {/* <Provider store={store}>  */}
+        <Provider store={store}> 
         <App />
-        {/* </Provider>  */}
+        </Provider>  
       </HashRouter>  </Suspense>
   </React.StrictMode>
 )

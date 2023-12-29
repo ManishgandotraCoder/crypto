@@ -2,6 +2,6 @@ export interface selectComponentType {
     submit: boolean, 
     value:string,
     changeValues: Function, 
-    title:string ,
+    name:string ,
     arr: any
 }

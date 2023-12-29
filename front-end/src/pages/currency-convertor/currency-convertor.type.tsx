@@ -6,5 +6,7 @@ export interface currencyConvertorType {
     },
     changeValues: Function,
     submit: boolean,
-    handleSubmit: Function
+    handleSubmit: Function,
+    cryptoList:any,
+    amount: string
 }

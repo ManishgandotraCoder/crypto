@@ -13,7 +13,14 @@ export class CryptoController {
         method: 'GET'
       }).then(response => response.json())
         .then((data: any) => {
-          helper.success(res, msg.RECORD_FETCHED_SUCCESSFULLY, data)
+          console.log("data", data);
+          
+          if (data?.status?.error_code) {
+            helper.error(res, msg.SERVER_ERROR, data)
+          } else {
+
+            helper.success(res, msg.RECORD_FETCHED_SUCCESSFULLY, data)
+          }
         })
     } catch (e) {
       helper.server_error(res, msg.SERVER_ERROR, null)
@@ -27,10 +34,13 @@ export class CryptoController {
         method: 'GET'
       }).then(response => response.json())
         .then((data: any) => {
-          let _curr: any = currency
-          let _coin: any = coin
-          helper.success(res, msg.RECORD_FETCHED_SUCCESSFULLY, (data[_curr][_coin]) * (Number(amount)))
-
+          if (data?.status?.error_code) {
+            helper.error(res, msg.SERVER_ERROR, data)
+          } else {
+            let _curr: any = currency
+            let _coin: any = coin
+            helper.success(res, msg.RECORD_FETCHED_SUCCESSFULLY, (data[_curr][_coin]) * (Number(amount)))
+          }
         })
     } catch (e) {
       helper.server_error(res, msg.SERVER_ERROR, null)
